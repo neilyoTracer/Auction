@@ -1,6 +1,9 @@
 <div class="box">
     <div class="box-header with-border">
-        <a class="btn btn-success btn-sm"><span class="glyphicon glyphicon-plus"></span>创建</a>
+        <a class="btn btn-success btn-sm" (click)="create()" >
+            <span class="glyphicon glyphicon-plus"></span>
+            创建
+        </a>
         <div class="box-tools">
             <div class="input-group input-group-sm" style="width: 150px;margin-top:7px;">
                 <input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
@@ -31,8 +34,14 @@
                     <app-stars [rating]="stock.rating"></app-stars>
                 </td>
                 <td>
-                    <a class="btn btn-warning btn-xs"><span class="glyphicon glyphicon-pencil"></span>修改</a>
-                    <a class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span>删除</a>
+                    <a class="btn btn-warning btn-xs" (click)="update(stock)">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                        修改
+                    </a>
+                    <a class="btn btn-danger btn-xs">
+                        <span class="glyphicon glyphicon-remove"></span>
+                        删除
+                    </a>
                 </td>
             </tr>
         </table>
