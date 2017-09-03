@@ -1,3 +1,7 @@
-<span *ngFor="let star of stars" 
+<a *ngFor="let star of stars;let i = index;" 
       class="glyphicon glyphicon-star" 
-      [class.glyphicon-star-empty]="star"></span>
+      [class.glyphicon-star-empty]="star"
+      [id]="rating"
+      (click)="clickStar(i)" 
+      ></a>
+<!-- 属性绑定id -->

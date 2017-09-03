@@ -18,7 +18,7 @@ export class ContentComponent implements OnInit {
     router.events
       .filter(event => event instanceof NavigationEnd)
       .subscribe((event:NavigationEnd) => {
-        console.log(event);
+        // console.log(event);
         if(event.url === '/dashboard') {
           this.pageTitle = '首页';
           this.pageDesc = '';
